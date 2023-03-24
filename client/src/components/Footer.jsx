@@ -1,4 +1,3 @@
-import logo from '../assets/logos/wc-logo.png'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -25,7 +24,7 @@ export default function Footer({user}) {
 
         <div class="flex flex-col items-center justify-between md:flex-row">
             <a href="/home">
-                <img class="w-auto h-7" src={logo} alt=""/>
+                <img class="w-auto h-7" src="https://static.wikia.nocookie.net/powerpuff/images/e/e8/Powerpuff-girls-mojo-jojo-brother-1440611559.gif/revision/latest/scale-to-width-down/500?cb=20160617183022" alt=""/>
             </a>
 
             <div class="flex mt-4 md:m-0">

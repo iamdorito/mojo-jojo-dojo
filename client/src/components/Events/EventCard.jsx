@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import logo from '../../assets/logos/wc-logo.png'
-import RoadToOne from '../../assets/logos/one-show-road-to-one-v2.PNG'
+// import logo from '../../assets/logos/wc-logo.png'
+// import RoadToOne from '../../assets/logos/one-show-road-to-one-v2.PNG'
 import EventDetailPage from './EventDetailPage'
 
 
@@ -12,7 +12,9 @@ export default function EventCard({ handleClick, event }) {
             className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
             <img src=
                 {event.poster_img ? 
-                    event.poster_img : logo}                
+                    event.poster_img : 
+                    "https://static.wikia.nocookie.net/powerpuff/images/e/e8/Powerpuff-girls-mojo-jojo-brother-1440611559.gif/revision/latest/scale-to-width-down/500?cb=20160617183022"
+                }                
                 alt="event promo"
                 className="h-full w-full object-cover object-center lg:h-full lg:w-full"
             />

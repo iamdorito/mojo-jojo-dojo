@@ -1,4 +1,4 @@
-import RoadToOne from '../../assets/logos/one-show-road-to-one-v2.PNG'
+// import RoadToOne from '../../assets/logos/one-show-road-to-one-v2.PNG'
 
 export default function Testimonial() {
   return (
@@ -10,7 +10,7 @@ export default function Testimonial() {
         // className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-black-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" 
         />
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <img className="mx-auto h-12" src={RoadToOne} alt="" />
+        {/* <img className="mx-auto h-12" src={RoadToOne} alt="" /> */}
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
             <p>

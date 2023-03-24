@@ -3,7 +3,6 @@ class CreateDivisions < ActiveRecord::Migration[7.0]
     create_table :divisions do |t|
       t.string :name
       t.integer :lbs
-      t.integer :kg
     end
   end
 end

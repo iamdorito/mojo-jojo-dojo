@@ -29,7 +29,7 @@ class EventsController < ApplicationController
 
     private
     def event_params 
-        params.permit(:event_number, :name, :location, :date, :poster_img)
+        params.permit(:name, :location, :date)
     end
 
     def render_not_found

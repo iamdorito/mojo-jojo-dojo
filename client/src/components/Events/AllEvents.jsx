@@ -1,7 +1,3 @@
-import image1 from '../../assets/wc-1.png';
-import image2 from '../../assets/wc-2.png';
-import image3 from '../../assets/wc-3.png';
-import image4 from '../../assets/wc-4.png';
 import EventCard from './EventCard';
 import EventDetailPage from './EventDetailPage';
 import FightCard from './FightCard';
@@ -38,7 +34,9 @@ export default function UpcomingEvents() {
   return (
   <>
     <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-      <img src={image1} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
+      <img 
+        src="https://static.wikia.nocookie.net/powerpuff/images/e/e8/Powerpuff-girls-mojo-jojo-brother-1440611559.gif/revision/latest/scale-to-width-down/500?cb=20160617183022" 
+        alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
       <svg
         viewBox="0 0 1097 845"
         aria-hidden="true"

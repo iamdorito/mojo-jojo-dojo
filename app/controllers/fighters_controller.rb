@@ -31,7 +31,7 @@ class FightersController < ApplicationController
 
     private
     def fighter_params 
-        params.permit(:id, :first_name, :last_name, :email, :gender, :gym_id, :division_id, :wins, :losses, :draw, :status, :password_digest)
+        params.permit(:id, :name, :nickname, :gender, :gym_id, :division_id, :wins, :losses, :image, :status, :username, :password_digest)
     end
 
     def render_not_found

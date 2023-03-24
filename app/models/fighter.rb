@@ -8,5 +8,5 @@ class Fighter < ApplicationRecord
     belongs_to :gym
     belongs_to :division
 
-    validates :first_name,:last_name,:email,:gender,:gym_id,:status, presence: true
+    validates :name,:gender,:gym_id,:status, presence: true
 end

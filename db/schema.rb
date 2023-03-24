@@ -14,33 +14,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_16_220430) do
   create_table "divisions", force: :cascade do |t|
     t.string "name"
     t.integer "lbs"
-    t.integer "kg"
   end
 
   create_table "events", force: :cascade do |t|
-    t.integer "event_number"
     t.string "name"
     t.string "location"
     t.string "date"
-    t.string "poster_img"
   end
 
   create_table "fighters", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "name"
     t.string "nickname"
-    t.string "email"
     t.string "gender"
     t.integer "gym_id"
     t.integer "division_id"
     t.integer "wins"
     t.integer "losses"
-    t.integer "draw"
-    t.string "headshot"
-    t.string "insta"
+    t.string "image"
     t.string "status"
+    t.string "username"
     t.string "password_digest"
-    t.index ["email"], name: "index_fighters_on_email", unique: true
   end
 
   create_table "fights", force: :cascade do |t|
