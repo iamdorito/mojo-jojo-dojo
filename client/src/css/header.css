@@ -1,0 +1,30 @@
+.headerContainer {
+    height: 80px;
+    width: 100%;
+    background-color: #35363a;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.headerContainer {
+    top: 0;
+    justify-content: center;
+    color: white;
+}
+
+.headerLogo{
+    width: 80px;
+}
+
+.link-title{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
