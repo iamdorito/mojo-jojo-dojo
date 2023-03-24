@@ -9,6 +9,7 @@ import {
   ArrowRightOnRectangleIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, TvIcon, TicketIcon } from '@heroicons/react/20/solid'
+import mojoFace from '../assets/mojo-face.png';
 import { Link } from 'react-router-dom'
 
 const events = [
@@ -39,7 +40,7 @@ export default function Header({ user, logout }) {
         <div className="flex lg:flex-1">
           <a href="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Warrior's Cup</span>
-            <img className="h-20 w-auto" src="https://static.wikia.nocookie.net/powerpuff/images/e/e8/Powerpuff-girls-mojo-jojo-brother-1440611559.gif/revision/latest/scale-to-width-down/500?cb=20160617183022" alt="Warrior's Cup" />
+            <img className="h-20 w-auto" src={mojoFace} alt="Warrior's Cup" />
           </a>
         </div>
         <div className="flex lg:hidden">

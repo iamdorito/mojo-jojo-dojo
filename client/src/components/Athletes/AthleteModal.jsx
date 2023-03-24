@@ -44,12 +44,15 @@ export default function AthleteModal({ fighter, setShowAtheleteModal }) {
           {/*header*/}
           <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
             <h3 className="text-3xl font-semibold text-black-700">
-              {fighter.first_name} {fighter.last_name}
+              {fighter.name}
             </h3>
+            <span className="mt-4 text-gray-500 text-lg leading-relaxed">
+              {fighter.status}
+            </span>
             <button
               className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
               onClick={() => setShowAtheleteModal(false)}
-            >
+              >
               <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
                 ×
               </span>
@@ -60,15 +63,13 @@ export default function AthleteModal({ fighter, setShowAtheleteModal }) {
             <p className="mt-4 text-gray-500 text-lg leading-relaxed">
               {fighter.gym.name} {fighter.division.name}
             </p>
-            <dd className="mt-4 text-gray-500 text-lg leading-relaxed">
+            {/* <span className="mt-4 text-gray-500 text-lg leading-relaxed">
               {fighter.division_name}
-            </dd>
-            <dt className="mt-4 text-gray-500 text-lg leading-relaxed">
-              {fighter.status}
-            </dt>
-            <dt className="mt-4 text-gray-500 text-lg leading-relaxed">
-              {fighter.insta}
-            </dt>
+            </span> */}
+
+            <span className="mt-4 text-gray-500 text-lg leading-relaxed">
+              {fighter.wins}-{fighter.losses} (W-L)
+            </span>
           </div>
           {/*footer*/}
           <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">

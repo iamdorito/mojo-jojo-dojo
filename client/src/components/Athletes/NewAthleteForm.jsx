@@ -38,7 +38,7 @@ export default function NewAthleteForm({
     body: formData
   })
   let res = await req.json()
-    console.log("Res", res)
+    // console.log("Res", res)
   let newFighterData = await res.json();
   onAddFighter(newFighterData);
 }
@@ -65,26 +65,12 @@ export default function NewAthleteForm({
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
-                        First name
+                      <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
+                        Name
                       </label>
                       <input
                       type="text"
-                      name="first_name"
-                      id="first_name"
-                      required
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-3">
-                    <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
-                      Last name
-                    </label>
-                    <input
-                      type="text"
-                      name="last_name"
-                      id="last_name"
+                      name="name"
                       required
                       className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
@@ -98,19 +84,6 @@ export default function NewAthleteForm({
                       type="text"
                       name="nickname"
                       id="nickname"                      
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-
-                  <div className="col-span-6 sm:col-span-4">
-                    <label htmlFor="email-address" className="block text-sm font-medium leading-6 text-gray-900">
-                      Email address
-                    </label>
-                    <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      required
                       className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -190,19 +163,6 @@ export default function NewAthleteForm({
                       className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
-
-                  <div className="col-span-6 sm:col-span-1">
-                    <label className="block text-sm font-medium leading-6 text-gray-900">
-                      Draw
-                    </label>
-                    <input
-                      type="number"
-                      name="draw"
-                      id="draw"
-                      required
-                      className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
                 </div>
                 
                 <div className="col-span-6 sm:col-span-3">
@@ -226,18 +186,16 @@ export default function NewAthleteForm({
                 <div className="grid grid-cols-3 gap-6">
                   <div className="col-span-3 sm:col-span-2">
                     <label className="block text-sm font-medium leading-6 text-gray-900">
-                      Instagram
+                      Image Link
                     </label>
                     <div className="mt-2 flex rounded-md shadow-sm">
                       <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 px-3 text-gray-500 sm:text-sm">
-                        @
                       </span>
                       <input
                         type="text"
-                        name="insta"
-                        id="insta"
+                        name="image"
                         className="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="fighter-instagram"
+                        placeholder="image link"
                       />
                     </div>
                   </div>
