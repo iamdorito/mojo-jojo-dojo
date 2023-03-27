@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import UpdateFighter from "./UpdateFighter"
+import UpdateFighter from "./UpdateAthlete"
 
 
 export default function AthleteModal({ fighter, setShowAtheleteModal }) {
