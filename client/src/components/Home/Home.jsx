@@ -34,8 +34,8 @@ export default function Home() {
         </div>                
       </div>
     </section>
-      {/* <Testimonial />
-      <Sponsors /> */}
+      <Testimonial />
+      {/* <Sponsors /> */}
       </>
     )
   }

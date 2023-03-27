@@ -23,6 +23,7 @@ class UsersController < ApplicationController
             render json: {error: 'invalid email or password'}, status: 422
         end
     end
+
     def create
         user = User.new(email: params[:email], password: params[:password])
         if user.save
@@ -33,6 +34,7 @@ class UsersController < ApplicationController
             render json: {error: user.errors.full_messages[0], status: 422}
         end
     end
+    
     def show
         # puts @current_user
         user = User.find_by!(id: params[:id])

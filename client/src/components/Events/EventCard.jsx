@@ -28,7 +28,7 @@ export default function EventCard({ handleClick, event }) {
                 alt="event promo"
                 classNameName="h-full w-full object-cover object-center lg:h-full lg:w-full"
             />
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+            {/* <p className="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p> */}
         </div>
         </li>
     </div>
