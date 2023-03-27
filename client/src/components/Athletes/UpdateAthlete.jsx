@@ -13,7 +13,7 @@ export default function UpdateFighter({
 
   useEffect(() => {
       const fetchGyms = async () => {
-      let res = await fetch("http://localhost:3000/gyms");
+      let res = await fetch("/gyms");
       let gymData = await res.json();
       setGyms(gymData);
   };
@@ -23,7 +23,7 @@ export default function UpdateFighter({
   //  GET DIVISIONS to map in form 
   useEffect(() => {
   const fetchDivisions = async () => {
-    let res = await fetch("http://localhost:3000/divisions");
+    let res = await fetch("/divisions");
     let divisionData = await res.json();
     setDivisions(divisionData);
   };

@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get '/users', to: 'users#index'
   get '/me', to: 'users#me'
   post '/login', to: 'users#login'
-  post '/signup', to: 'users#create'
+  post '/register', to: 'users#create'
   get '/users/:id', to: 'users#show'
   
 end

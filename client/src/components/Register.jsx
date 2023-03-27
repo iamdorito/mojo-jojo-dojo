@@ -12,7 +12,7 @@ export default function Register({ user, setUser }) {
         e.preventDefault();
         try {
         let formData = new FormData(form.current);
-        let req = await fetch("/signup", {
+        let req = await fetch("/register", {
             method: "POST",
             body: formData,
         });
@@ -29,14 +29,14 @@ export default function Register({ user, setUser }) {
         }
     };
 
-    // useEffect(() => {
-    //     if (user) {
-    //     setTimeout(() => {
-    //         navigate("/");
-    //         setIsLoading(false);
-    //     }, 3000);
-    //         }
-    // }, [user, navigate]);
+    useEffect(() => {
+        if (user) {
+        setTimeout(() => {
+            navigate("/home");
+            setIsLoading(false);
+        }, 3000);
+            }
+    }, [user, navigate]);
 
     return(
     <>
