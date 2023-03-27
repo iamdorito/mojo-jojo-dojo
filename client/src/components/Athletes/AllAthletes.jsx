@@ -40,22 +40,25 @@ export default function Athletes({user}) {
     <>
     <section class="bg-white dark:bg-gray-900">
       <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Meet the Athletes</h1>
-
-        <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-          Mojo Jojo Dojo has the best talent on the internet. Periot.
-        </p>
+        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+          Meet the Athletes
+          </h1>
 
         {user ? (
-        <div class="flex items-center justify-center">
-          <div class="flex items-center p-1 border border-blue-600 dark:border-blue-400 rounded-xl">
+          <>
+          <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+            Admin Controllers
+            </p>
+
+          <div class="flex items-center justify-center">
+          <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
             <button 
-              class="px-4 py-2 text-sm font-medium text-white capitalize bg-blue-600 md:py-3 rounded-xl md:px-12"
+              class="px-4 py-2 text-sm font-medium text-white capitalize bg-purple-600 md:py-3 rounded-xl md:px-12"
               >
               all athletes
               </button>
             <button 
-              className="px-4 py-2 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+              className="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
               onClick={() => setOpenNewFighterForm(!openNewFighterForm)}>
                 Add New Athlete 
                 {/* <span aria-hidden="true">&rarr;</span> */}
@@ -69,9 +72,9 @@ export default function Athletes({user}) {
               ) : null}
               {/* <br/> */}
             {/* </div>
-           <div class="flex items-center p-1 border border-blue-600 dark:border-blue-400 rounded-xl"> */}
+           <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl"> */}
             <button 
-              className="px-4 py-2 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+              className="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
               onClick={() => setUpdateNewFighterForm(!openUpdateFighterForm)}>
               Update Athlete 
               {/* <span aria-hidden="true">&rarr;</span> */}
@@ -84,23 +87,28 @@ export default function Athletes({user}) {
                   />
                   ) : null}
                 </div>
-           </div>)
+           </div>
+           </>)
           : null}
 
+        <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+          Mojo Jojo Dojo has the best talent on the internet. Periot.
+        </p>
+
         <div class="flex items-center justify-center">
-          <div class="flex items-center p-1 border border-blue-600 dark:border-blue-400 rounded-xl">
+          <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
             <button 
-              class="px-4 py-2 text-sm font-medium text-white capitalize bg-blue-600 md:py-3 rounded-xl md:px-12"
+              class="px-4 py-2 text-sm font-medium text-white capitalize bg-purple-600 md:py-3 rounded-xl md:px-12"
               >
               all athletes
               </button>
             <button 
-              class="px-4 py-2 mx-4 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:mx-8 md:px-12"
+              class="px-4 py-2 mx-4 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:mx-8 md:px-12"
               >
               girls
               </button>
             <button 
-              class="px-4 py-2 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+              class="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
               >
               boys
               </button>

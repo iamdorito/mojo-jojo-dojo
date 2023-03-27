@@ -9,6 +9,8 @@ import AllAthletes from './components/Athletes/AllAthletes.jsx'
 import Connect from './components/Connect.jsx'
 import Announcements from './components/Announcements.jsx'
 import Login from './components/Login.jsx'
+import Register from './components/Register.jsx'
+
 import SearchResults from './components/SearchResults.jsx'
 import Cookies from 'js-cookie'
 
@@ -56,6 +58,7 @@ function App() {
           <Route path='/connect' element={<Connect />} />
           <Route path='/announcements' element={<Announcements />} />
           <Route path='/login' element={<Login user={user} setUser={setUser} logout={logout} />} />
+          <Route path='/register' element={<Register user={user} setUser={setUser} logout={logout} />} />
           <Route path='/search' element={<SearchResults/>} 
           />
         </Routes>

@@ -39,8 +39,8 @@ export default function Header({ user, logout }) {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <a href="/home" className="-m-1.5 p-1.5">
-            <span className="sr-only">Warrior's Cup</span>
-            <img className="h-20 w-auto" src={mojoFace} alt="Warrior's Cup" />
+            <span className="sr-only">Mojo Jojo Dojo</span>
+            <img className="h-20 w-auto" src={mojoFace} alt="Mojo Jojo Dojo" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -77,7 +77,7 @@ export default function Header({ user, logout }) {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-purple-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
                         <Link to={item.link} className="block font-semibold text-gray-900">
@@ -126,7 +126,7 @@ export default function Header({ user, logout }) {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                     >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-purple-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
                         <Link to={item.link} className="block font-semibold text-gray-900">
@@ -173,7 +173,7 @@ export default function Header({ user, logout }) {
                       className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                       >
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-purple-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
                         <Link to={item.link} className="block font-semibold text-gray-900">
@@ -185,7 +185,7 @@ export default function Header({ user, logout }) {
                   ))}
                     <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                       <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                        <ArrowRightOnRectangleIcon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                        <ArrowRightOnRectangleIcon className="h-6 w-6 text-gray-600 group-hover:text-purple-600" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
                         <span onClick={logout} className="block font-semibold text-gray-900">
