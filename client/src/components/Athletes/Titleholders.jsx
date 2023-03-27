@@ -16,10 +16,22 @@ export default function TitleHolders() {
 
 
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">Titleholders</h2>
-         
+    <>
+    <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <img 
+        src="https://cdn.dribbble.com/users/1808107/screenshots/11460419/media/0631ec21d8c5b09e3c8d1a51154152ea.gif" 
+        alt="" className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" 
+        />
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">Titleholders</h2>
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Stay tuned to see what's coming up!
+            </p>
+          </div>
+        </div>
+      </div>
+    
          <div class="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
           <div class="flex items-center justify-between">
               <span class="text-sm font-light text-gray-600 dark:text-gray-400">Mar 10, 2019</span>
@@ -49,7 +61,8 @@ export default function TitleHolders() {
             <AthleteCard fighter={fighter} />
           ))}
         </div> */}
-      </div>
-    </div>
+      {/* </div>
+    </div> */}
+    </>
   )
 }
