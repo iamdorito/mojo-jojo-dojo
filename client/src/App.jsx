@@ -5,6 +5,7 @@ import Events from './components/Events/AllEvents.jsx'
 
 import Titleholders from './components/Athletes/Titleholders'
 import AllAthletes from './components/Athletes/AllAthletes.jsx'
+// import AthletePage from './components/Athletes/Filters'
 
 import Connect from './components/Connect.jsx'
 import Announcements from './components/Announcements.jsx'
@@ -28,7 +29,7 @@ function App() {
 
   useEffect(() => {
     const loadUser = async () => {
-      let req = await fetch("http://localhost:3000/me", {
+      let req = await fetch("/me", {
         headers: {Authorization: Cookies.get('token')}
       })
       let res = await req.json()

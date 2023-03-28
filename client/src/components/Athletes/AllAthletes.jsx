@@ -12,24 +12,37 @@ export default function Athletes({user}) {
   const [newFighter, setNewFighter] = useState({})
 
   // GET fighters
-    useEffect(() => {
-      const handleAllAthletes = () => {
-        const fetchFighters = async () => {
-          let res = await fetch("/fighters");
-          let fighterData = await res.json();
-          setFighters(fighterData);
-        };
-        fetchFighters();
-      }
-       handleAllAthletes();
-    },[]);
+    // useEffect(() => {
+    //   const handleAllAthletes = () => {
+    //     const fetchFighters = async () => {
+    //       let res = await fetch("/fighters");
+    //       let fighterData = await res.json();
+    //       setFighters(fighterData);
+    //     };
+    //     fetchFighters();
+    //   }
+    //    handleAllAthletes();
+    // },[]);
 
+    // const handleAllAthletes = () => {
+    useEffect(() => {
+      const fetchFighters = async () => {
+        let res = await fetch("/fighters");
+        let fighterData = await res.json();
+        setFighters(fighterData);
+      };
+      fetchFighters();
+    }, []);
+  // }
+  //   handleAllAthletes();
   const handleFemaleFilter = () => {
+    // handleAllAthletes();
     const femaleFightersArray = fighters.filter((f) => f.gender === "F");
     setFilterFighters(femaleFightersArray)
   }
 
   const handleMaleFilter = () => {
+    // handleAllAthletes();
     const maleFightersArray = fighters.filter((f) => f.gender === "M");
     setFilterFighters(maleFightersArray)
   }
@@ -113,7 +126,7 @@ export default function Athletes({user}) {
         <div className="flex items-center justify-center">
           <div className="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
             <button 
-              // onClick={allFighters}
+              // onClick={handleAllAthletes}
               className="px-4 py-2 text-sm font-medium text-white capitalize bg-purple-600 md:py-3 rounded-xl md:px-12"
               >
               all athletes
