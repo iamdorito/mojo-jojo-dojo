@@ -8,8 +8,8 @@ import AllAthletes from './components/Athletes/AllAthletes.jsx'
 
 import Connect from './components/Connect.jsx'
 import Announcements from './components/Announcements.jsx'
-import Login from './components/Login.jsx'
-import Register from './components/Register.jsx'
+import Login from './components/UserLogin/Login.jsx'
+import Register from './components/UserLogin/Register.jsx'
 
 import SearchResults from './components/SearchResults.jsx'
 import Cookies from 'js-cookie'
