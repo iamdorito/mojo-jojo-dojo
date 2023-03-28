@@ -11,7 +11,7 @@ export default function Register({ user, setUser }) {
 
     const createUser = async (e) => {
         e.preventDefault();
-        try {
+        // try {
         let formData = new FormData(form.current);
         let req = await fetch("/register", {
             method: "POST",
@@ -22,22 +22,20 @@ export default function Register({ user, setUser }) {
             console.log(res.user);
             Cookies.set("token", res.token);
             setUser(res.user);
-            <Success />
-        }
-        } catch (error) {
-        setIsLoading(false);
-        alert("The email has been taken");
+            navigate("/login");
+        } else {
+            alert("Error: Username/email already exists! Please try again!")
         }
     };
 
-    useEffect(() => {
-        if (user) {
-        setTimeout(() => {
-            navigate("/home");
-            <Success />
-        }, 3000);
-            }
-    }, [user, navigate]);
+    // useEffect(() => {
+    //     if (user) {
+    //     setTimeout(() => {
+    //         navigate("/");
+    //         <Success />
+    //     }, 3000);
+    //         }
+    // }, [user, navigate]);
 
     return(
     <>

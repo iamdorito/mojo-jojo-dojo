@@ -41,7 +41,7 @@ export default function AthleteCard({ fighter, getGymName, user }) {
             </p>
             </div>
 
-        {user ? 
+    {user ? 
         <div className="flex items-center p-6 border-t border-solid border-slate-200  hover:border-purple-600 rounded-b">
         <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
             <button

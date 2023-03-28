@@ -58,7 +58,8 @@ return (
                 {/* <span aria-hidden="true">&rarr;</span> */}
               </button>
             {openNewFightForm ? (
-              <NewFightForm 
+              <NewFightForm
+                event={event}
                 newFight={newFight}
                 setNewFight={setNewFight}
                 onAddFight={onAddFight} 
