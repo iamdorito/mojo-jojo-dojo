@@ -13,12 +13,12 @@ import mojoFace from '../assets/mojo-face.png';
 import { Link } from 'react-router-dom'
 
 const events = [
-  { name: 'Upcoming', link: '/events', icon: ChartPieIcon },
-  { name: 'Past', link: '/events', icon: CursorArrowRaysIcon }
+  { name: 'Upcoming', link: '/upcomingevents', icon: ChartPieIcon },
+  // { name: 'Past', link: '/events', icon: CursorArrowRaysIcon }
 ]
 const callsToAction = [
   { name: 'Buy Tickets', link: 'https://www.threepillarpromotions.com/event-details/warriors-cup-51-road-to-one', icon: TicketIcon },
-  { name: 'View Online', link: 'https://bxngtv.com/', icon: TvIcon },
+  { name: 'View Online', link: 'https://www.youtube.com/watch?v=zgSGzXfGtVc', icon: TvIcon },
 ]
 const athletes = [
   { name: 'Titleholders', link: '/titleholders', icon: CursorArrowRaysIcon },
@@ -38,7 +38,7 @@ export default function Header({ user, logout }) {
     <header className="bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/home" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Mojo Jojo Dojo</span>
             <img className="h-20 w-auto" src={mojoFace} alt="Mojo Jojo Dojo" />
           </a>

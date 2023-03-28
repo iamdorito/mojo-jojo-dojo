@@ -1,7 +1,7 @@
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './components/Home/Home.jsx'
-import Events from './components/Events/AllEvents.jsx'
+import UpcomingEvents from './components/Events/UpcomingEvents.jsx'
 
 import Titleholders from './components/Athletes/Titleholders'
 import AllAthletes from './components/Athletes/AllAthletes.jsx'
@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     const loadUser = async () => {
-      let req = await fetch("http://localhost:3000/me", {
+      let req = await fetch("/me", {
         headers: {Authorization: Cookies.get('token')}
       })
       let res = await req.json()
@@ -49,8 +49,8 @@ function App() {
       <BrowserRouter>
         <Header user={user} logout={logout} search={search} setSearch={setSearch} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
         <Routes>
-          <Route path='/home' element={<Home />} />
-          <Route path='/events' element={<Events />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/upcomingevents' element={<UpcomingEvents user={user} />} />
           {/* <Route path='/events/promotions' element={<EventDetailPage />} /> */}
           <Route path='/titleholders' element={<Titleholders />} />
           <Route path='/athletes' element={<AllAthletes user={user} />} />

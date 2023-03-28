@@ -1,11 +1,11 @@
 import EventCard from './EventCard';
 import EventDetailPage from './EventDetailPage';
-import FightCard from './FightCard';
+import FightCard from './Fights/FightCard';
 
 import { useState, useEffect } from 'react'
 
 
-export default function UpcomingEvents() {
+export default function UpcomingEvents({user}) {
   const [events, setEvents] = useState([])
   const [openNewEventForm, setNewEventForm] = useState(false)
   const [newEvent, setNewEvent] = useState({})
@@ -51,13 +51,17 @@ export default function UpcomingEvents() {
     <ol class="items-center sm:flex">
       {events.map((event) => (
         <EventCard 
+          user={user}
           event={event}
           handleClick={handleClick}       
         />
       ))}
     </ol>
 
-    <EventDetailPage event={clicked}/> 
+    <EventDetailPage 
+      user={user}
+      event={clicked}
+      /> 
   </>
   )
 }

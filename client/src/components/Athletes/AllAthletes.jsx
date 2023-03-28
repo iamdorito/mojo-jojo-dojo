@@ -47,7 +47,7 @@ export default function Athletes({user}) {
         {user ? (
           <>
           <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-            Admin Controllers
+            {user.username} Admin Controllers
             </p>
 
           <div class="flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function Athletes({user}) {
             <button 
               class="px-4 py-2 text-sm font-medium text-white capitalize bg-purple-600 md:py-3 rounded-xl md:px-12"
               >
-              all athletes
+              Admin Controllers
               </button>
             <button 
               className="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
@@ -70,14 +70,11 @@ export default function Athletes({user}) {
                 onAddFighter={onAddFighter} 
                 />
               ) : null}
-              {/* <br/> */}
-            {/* </div>
-           <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl"> */}
+           
             <button 
               className="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
               onClick={() => setUpdateNewFighterForm(!openUpdateFighterForm)}>
               Update Athlete 
-              {/* <span aria-hidden="true">&rarr;</span> */}
               </button>
             
               {openUpdateFighterForm ? (
@@ -87,7 +84,7 @@ export default function Athletes({user}) {
                   />
                   ) : null}
                 </div>
-           </div>
+            </div>
            </>)
           : null}
 

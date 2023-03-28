@@ -4,7 +4,7 @@ import { useState } from 'react'
 import EventDetailPage from './EventDetailPage'
 
 
-export default function EventCard({ handleClick, event }) {
+export default function EventCard({ handleClick, event, user }) {
 //  need to add conditionals to only show upcoming 4 events for dates after today
     return (
     <div onClick={()=>{handleClick(event)}} key={event.id} classNameName="group relative">
