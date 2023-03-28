@@ -37,17 +37,17 @@ export default function EventDetailPage({fight}) {
 
         <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3">
+            <div class="grid gap-8 py-8 px-4 rounded-lg shadow lg:mb-16 md:grid-cols-3">
                 <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" 
+                    {/* <a href="#"> */}
+                        <img class="w-fullrounded-lg sm:rounded-none sm:rounded-l-lg" 
                         src=
                         {fight.fighter1.image ?
                             fight.fighter1.image : 
                             "https://stickershop.line-scdn.net/stickershop/v1/sticker/198260120/iPhone/sticker_animation@2x.png"}
                         alt={fight.fighter1.name}
                         />
-                    </a>
+                    {/* </a> */}
                 </div> 
 
                 <div class="grid text-center md:grid-cols-3">
