@@ -2,10 +2,6 @@
 
 export default function Testimonial() {
   return (
-    // <section className="relative isolate overflow-hidden bg-black py-24 px-6 sm:py-32 lg:px-8">
-    //   <div 
-    //     // className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-black-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" 
-    //     />
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         {/* <img className="mx-auto h-12" src={RoadToOne} alt="" /> */}
         <figure className="mt-10">
@@ -30,6 +26,6 @@ export default function Testimonial() {
           </figcaption>
         </figure>
       </div>
-    // </section>
+
   )
 }

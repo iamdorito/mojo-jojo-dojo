@@ -82,6 +82,7 @@ export default function NewAthleteForm({
                     >
                     <option></option>
                     {fighters.map(fighter => (
+                        // <option key={fighter.id} value={fighter.id}>{fighter.image}</option>
                         <option key={fighter.id} value={fighter.id}>{fighter.name}</option>
                         ))}
                     </select>

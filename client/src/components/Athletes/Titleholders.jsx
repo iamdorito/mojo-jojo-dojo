@@ -13,8 +13,8 @@ const titleholders = [
     division_weight: '126lbs',
     fighter_name: 'Butch',
     record: '3-0-0 (W-L-D)',
-    imageUrl:'http://images5.fanpop.com/image/photos/31200000/butch-the-rowdyruff-boys-31208813-1024-768.jpg'
-    // imageUrl:'https://thumbs.gfycat.com/SophisticatedAgreeableBlackwidowspider-size_restricted.gif'
+    // imageUrl:'http://images5.fanpop.com/image/photos/31200000/butch-the-rowdyruff-boys-31208813-1024-768.jpg'
+    imageUrl:'https://thumbs.gfycat.com/SophisticatedAgreeableBlackwidowspider-size_restricted.gif'
   },
   {
     division: 'Welterweight',
@@ -26,7 +26,7 @@ const titleholders = [
   {
     division: 'Middleweight',
     division_weight: '160lbs',
-    fighter_name: 'Ace D Copular',
+    fighter_name: '♠️ Ace D Copular',
     record: '10-0-0 (W-L-D)',
     imageUrl:'https://64.media.tumblr.com/f8fff19db64647cf71e4ff9d28d9bc6d/tumblr_p9rzdi8h421xo55p6o2_r1_250.gifv'
   },
