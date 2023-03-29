@@ -2,38 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import UpdateFighter from "./UpdateAthlete"
 
 
-export default function AthleteModal({ fighter, setShowAtheleteModal, user }) {
-  const [selectedFighter, setSelectedFighter] = useState({})
-  const formRef = useRef(null);
-
-  // // PATCH fighter
-  //   const handleSubmit = async (fighter) => {
-  //     let req = await fetch(`fighters/${fighter.id}`, {
-  //       method: "PATCH", 
-  //       headers: {
-  //           "Content-Type" : "application/json"
-  //       }
-  //     })
-  //     let res = await req.json()
-  //     if (req.ok) {
-  //       console.log(res)
-  //       setSelectedFighter(fighter)
-  //     } else {
-  //       console.log(res.error)
-  //     }
-  // }
-  
-  // // DELETE fighter
-  // const handleDelete = async () => {
-  //   console.log(fighter.id)
-  //   let req = await fetch(`/fighters/${fighter.id}`, { 
-  //     method: "DELETE",
-  //     })
-  //   if (!req.ok) {
-  //       throw new Error('Failed to delete athlete');
-  //     }
-  //     console.log('Athlete deleted successfully');    
-  //   }
+export default function AthleteModal({ fighter, setShowAtheleteModal }) {
 
   return (
     <>
@@ -65,15 +34,36 @@ export default function AthleteModal({ fighter, setShowAtheleteModal, user }) {
           </div>
 
           <ul className="relative p-6 flex-auto">
-            <li className="mt-4 text-gray-500 text-lg leading-relaxed">
-              {fighter.gym.name}
+            <li className="mt-4 text-3xl font-semibold leading-relaxed">
+              <h3 className="text-purple-600 text-xl">
+                Gym
+              </h3>
+              <span className="text-gray-500 text-lg">
+                {fighter.gym.name}
+              </span>
             </li>
-            <li className="mt-4 text-gray-500 text-lg leading-relaxed">
+            <li className="mt-4 text-3xl font-semibold leading-relaxed">
+              <h3 className="text-purple-600 text-xl">
+                Division
+              </h3>
+              <span className="text-gray-500 text-lg">
+                {fighter.division.name}
+              </span>
+            </li>
+            <li className="mt-4 text-3xl font-semibold leading-relaxed">
+              <h3 className="text-purple-600 text-xl">
+                Record
+              </h3>
+              <span className="text-gray-500 text-lg">
+                {fighter.wins}-{fighter.losses} (W-L)
+              </span>
+            </li>
+            {/* <li className="mt-4 text-gray-500 text-lg leading-relaxed">
               {fighter.division.name}
             </li>
             <li className="mt-4 text-gray-500 text-lg leading-relaxed">
               {fighter.wins}-{fighter.losses} (W-L)
-            </li>
+            </li> */}
           </ul>
 
         </div>

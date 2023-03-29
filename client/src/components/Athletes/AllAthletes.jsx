@@ -36,23 +36,11 @@ export default function Athletes({user}) {
     setFighters(updatedFighterArray);
   }
 
-  const filterFemale = (() => {
-    const fetchFighters = async () => {
-      let res = await fetch("/fighters");
-      let fighterData = await res.json();
-      // Filter the fighters based on their weight class
-      let femaleFighters = fighterData.filter(fighter => fighter.gender === "F");
-      // Update the state with the filtered fighters data
-      console.log(femaleFighters);
-      };
-      fetchFighters();
-    }, []);
-
   return (
     <>
     <section class="bg-white dark:bg-gray-900">
       <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+        <h1 class="text-2xl font-extrabold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
           Meet the Athletes
           </h1>
 
@@ -126,7 +114,7 @@ export default function Athletes({user}) {
         </div> */}
 
 
-          <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+          {/* <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
             <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
               <div class="w-full md:w-1/2">
                 <form class="flex items-center">
@@ -200,7 +188,7 @@ export default function Athletes({user}) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-5">
