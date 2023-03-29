@@ -85,7 +85,7 @@ return (
 
             {event.fights.map((fight) => {
                 return(
-                    <FightCard fight={fight} />
+                    <FightCard user={user} fight={fight} />
                 )
             })}
 
