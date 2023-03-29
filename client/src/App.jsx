@@ -1,6 +1,7 @@
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './components/Home/Home.jsx'
+import Sponsors from './components/Home/Sponsors.jsx'
 import UpcomingEvents from './components/Events/UpcomingEvents.jsx'
 
 import Titleholders from './components/Athletes/Titleholders'
@@ -62,6 +63,7 @@ function App() {
           <Route path='/search' element={<SearchResults/>} 
           />
         </Routes>
+      <Sponsors />
       <Footer user={user} />
       </BrowserRouter>
  

@@ -8,7 +8,6 @@ export default function EventDetailPage({ event, user }) {
     const [openNewFightForm, setOpenNewFightForm] = useState(false)
     // const [openUpdateFightForm, setUpdateNewFightForm] = useState(false)
     const [newFight, setNewFight] = useState({})
-      const navigate = useNavigate();
 
     // Add new fighter to list
   const onAddFight = (newFight) => {
