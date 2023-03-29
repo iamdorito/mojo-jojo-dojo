@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate, Link } from "react-router-dom";
 
 export default function NewAthleteForm({ 
   event,
@@ -9,6 +10,8 @@ export default function NewAthleteForm({
   const [fighters, setFighters] = useState([])
   const [divisions, setDivisions] = useState([])
   const formRef = useRef(null);
+  const navigate = useNavigate();
+
 
   //  GET FIGHTERS to map in form
   useEffect(() => {
@@ -32,8 +35,9 @@ export default function NewAthleteForm({
   let res = await req.json()
     // console.log("Res", res)
   let newFightData = await res.json();
-  console.log(formData);
-  // onAddFight(newFightData);
+  // console.log(formData);
+  onAddFight(newFightData);
+  navigate("/upcomingevents")
 }
 
   return (

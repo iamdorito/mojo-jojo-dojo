@@ -33,7 +33,7 @@ export default function Athletes({user}) {
         return fighter;
       }
     })
-    setFighters(updatedFighterArray)
+    setFighters(updatedFighterArray);
   }
 
   return (
@@ -50,7 +50,7 @@ export default function Athletes({user}) {
             {user.username} Admin Controllers
             </p>
 
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-center px-5 py-2 bg-purple-50 rounded-full mb-10">
           <div class="flex items-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
             <button 
               class="px-4 py-2 text-sm font-medium text-white capitalize bg-purple-600 md:py-3 rounded-xl md:px-12"

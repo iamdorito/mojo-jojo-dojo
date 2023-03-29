@@ -14,80 +14,54 @@ export default function EventDetailPage({ fight, user }) {
 
     return(
         <>
-        <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
-            <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-3">
-                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" 
-                        src=
-                        {fight.fighter1.image ?
-                            fight.fighter1.image : 
-                            "https://stickershop.line-scdn.net/stickershop/v1/sticker/198260120/iPhone/sticker_animation@2x.png"}
-                        alt={fight.fighter1.name}
-                        />
-                    </a>
-                </div> 
-
-                <div class="grid text-center md:grid-cols-3">
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            {fight.fighter1.name}
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400">{fight.fighter1.nickname}</span>
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            {fight.fighter1.wins}-{fight.fighter1.losses} W-L
-                            </p>
-                    </div>
-
-                    <div class="text-center">
-                        <h3 class="text-l font-bold tracking-tight text-gray-900 dark:text-white">
-                            vs
-                        </h3>
-                    </div>
-                    
-
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            {fight.fighter2.name}
-                        </h3>
-                        <span class="text-gray-500 dark:text-gray-400">{fight.fighter2.nickname}</span>
-                        <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                            {fight.fighter2.wins}-{fight.fighter2.losses} W-L
-                            </p>
-                    </div>
-
-                    {user ? 
-                        <div className="flex items-center p-6 border-t border-solid border-slate-200  hover:border-purple-600 rounded-b">
-                        <div class="items-center p-5 border border-purple-600 dark:border-purple-400 rounded-xl">
-                            <button
-                                className="px-4 py-2 text-sm font-medium text-purple-600 capitalize transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
-                                type="button"
-                                onClick={handleDelete}
-                                >
-                                Delete
-                                </button>
-                            </div>
-                        </div>
-                        : null
-                        }
-                    
+        <div className="relative max-w-lg xl:max-w-xl ml-auto mr-6">
+          <div className="flex -mx-2">
+            <div className="w-1/2 px-2">
+              <div className="hover:animate-bounce delay-300 duration-300 ease-in-out">
+                <div className="relative h-44">
+                    <img className="absolute bottom-0 left-1/2 transform -translate-x-1/2 xl:h-52 object-contain xl:object-cover" 
+                        src={fight.fighter1.image} alt=""/>
                 </div>
+                <div className="px-8 pt-6 pb-8 bg-white text-red-600 rounded-xl">
+                    <span>{fight.fighter1.nickname}</span>
+                    <h4 className="text-2xl font-medium hover:text-red-800">{fight.fighter1.name}</h4>
+                    <span>{fight.fighter1.wins}-{fight.fighter1.losses} (W-L)</span>
+                </div>
+              </div>
+            </div>
 
-                <div class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-        
-                        <img class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg" 
-                        src=
-                        {fight.fighter2.image ?
-                            fight.fighter2.image : 
-                            "https://stickershop.line-scdn.net/stickershop/v1/sticker/198260118/iPhone/sticker_animation@2x.png"
-                        }
-                        alt={fight.fighter2.name}
-                        />
-                </div> 
-            </div>  
+            <h4 className="text-2xl font-extrabold">VS</h4>
+            
+
+            <div className="w-1/2 px-2">
+              <div className="hover:animate-bounce delay-300 duration-300 ease-in-out">
+                <div className="relative h-44">
+                    <img className="absolute bottom-0 left-1/2 transform -translate-x-1/2 xl:h-52 object-contain xl:object-cover" 
+                        src={fight.fighter2.image} alt=""/>
+                </div>
+                <div className="px-8 pt-6 pb-8 bg-white text-blue-600 rounded-xl">
+                    <span>{fight.fighter2.nickname}</span>
+                    <h4 className="text-2xl font-medium hover:text-blue-800">{fight.fighter2.name}</h4>
+                    <span>{fight.fighter2.wins}-{fight.fighter2.losses} (W-L)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+
+            {user ? 
+            <div className="text-center p-1 border border-purple-600 dark:border-purple-400 rounded-xl">
+                <button
+                    className="px-4 py-2 text-sm font-medium text-purple-600 transition-colors duration-300 md:py-3 dark:text-purple-400 dark:hover:text-white focus:outline-none hover:bg-purple-600 hover:text-white rounded-xl md:px-12"
+                    type="button"
+                    onClick={handleDelete}
+                    >
+                    Delete
+                    </button>
+                </div>
+            // </div>
+            : null
+            }  
         </>
     )
 }    

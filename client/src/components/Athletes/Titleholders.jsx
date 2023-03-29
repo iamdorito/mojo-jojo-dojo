@@ -66,7 +66,7 @@ export default function TitleHolders() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">Titleholders</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <p className="mt-6 text-lg text-gray-300">
               The least weak athletes
             </p>
           </div>
@@ -77,11 +77,13 @@ export default function TitleHolders() {
           <div class="container px-6 py-10 mx-auto">
         {titleholders.map((holder) => (        
           <div class="container px-6 py-10 mx-auto">
+              
+              <h1 class="mt-3 font-semibold text-gray-800 text-center capitalize lg:text-3xl">
+                🏆 {holder.division}</h1>
+
                 <p class="text-sm text-gray-500 text-center dark:text-gray-300 md:text-sm">
                   {holder.division_weight}
                 </p>
-            <h1 class="mt-3 font-semibold text-gray-800 text-center capitalize lg:text-3xl">
-              🏆 {holder.division}</h1>
 
               <div class="mt-8 lg:-mx-6 lg:flex lg:items-center">
 
@@ -96,7 +98,7 @@ export default function TitleHolders() {
                     {holder.fighter_name}
                 </h1>
 
-                <h3 class="mt-3 text-2xl font-extrabold text-purple-500">
+                <h3 class="mt-3 text-2xl font-extrabold text-purple-600">
                     {holder.record}
                 </h3>
 
