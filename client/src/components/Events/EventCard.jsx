@@ -7,7 +7,7 @@ import EventDetailPage from './EventDetailPage'
 export default function EventCard({ handleClick, event, user }) {
 //  need to add conditionals to only show upcoming 4 events for dates after today
     return (
-    <div className="container px-6 py-10 mx-auto -mt-72 sm:-mt-80 md:-mt-96"
+    <div className="container px-6 py-10 mx-auto -mt-72 sm:-mt-80 md:-mt-96 hover:scale-110"
         onClick={()=>{handleClick(event)}} key={event.id} >
 
         <li className="relative mb-6 sm:mb-0">
@@ -20,8 +20,8 @@ export default function EventCard({ handleClick, event, user }) {
         
         <div className="mt-3 sm:pr-8">
             
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">#{event.event_number} {event.name}</h3>
-            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{event.date} @ {event.location}</time>
+            <h3 className="text-lg font-semibold text-gray-900 hover:text-purple-600">{event.date}</h3>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"> {event.name} @ {event.location}</time>
             <img src=
                 {event.poster_img ? 
                     event.poster_img : 
