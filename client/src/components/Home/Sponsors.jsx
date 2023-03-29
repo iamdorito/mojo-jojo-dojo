@@ -14,8 +14,8 @@ export default function Sponsors() {
             height={48}
           />
           <img
-            className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            src=""
+            className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
+            src="https://www.pngitem.com/pimgs/m/25-254064_the-gangreen-gang-gangreen-gang-big-billy-hd.png"
             alt="The Gangreen Gang"
             width={158}
             height={48}
