@@ -9,6 +9,7 @@ export default function Athletes({user}) {
   const [openNewFighterForm, setOpenNewFighterForm] = useState(false)
   const [openUpdateFighterForm, setUpdateNewFighterForm] = useState(false)
   const [newFighter, setNewFighter] = useState({})
+  const [search, setSearch] = useState('')
 
   // GET fighters
   useEffect(() => {
@@ -114,7 +115,7 @@ export default function Athletes({user}) {
         </div> */}
 
 
-          {/* <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+          <div class="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
             <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
               <div class="w-full md:w-1/2">
                 <form class="flex items-center">
@@ -125,12 +126,16 @@ export default function Athletes({user}) {
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
                       </svg>
                     </div>
-                    <input type="text" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500" 
-                      placeholder="Search" required=""/>
+                    <input 
+                      type="text" 
+                      class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-purple-500 focus:border-purple-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500" 
+                      placeholder="Search" 
+                      onChange={(e) => setSearch(e.target.value)}
+                      required=""/>
                   </div>
                 </form>
               </div>
-              <div class="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:space-y-0 md:items-center md:space-x-3">
+              {/* <div class="flex flex-col items-stretch justify-end flex-shrink-0 w-full space-y-2 md:w-auto md:flex-row md:space-y-0 md:items-center md:space-x-3">
                 <button type="button" class="flex items-center justify-center px-4 py-2 text-sm font-medium text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">
                   <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path clip-rule="evenodd" fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
@@ -186,18 +191,31 @@ export default function Athletes({user}) {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
-          </div> */}
+          </div>
           
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-5">
 
-        {fighters?.map((fighter) => (
+        {/* {fighters?.map((fighter) => (
           <AthleteCard 
           user={user}
           fighter={fighter} />
-        ))}
+        ))} */}
+
+        {fighters.filter((fighter) => fighter.name.toLowerCase().includes(search)
+        // || fighter.nickname.toLowerCase().includes(search)
+        || fighter.gender.toLowerCase().includes(search)
+        // || fighter.gym.name.toLowerCase().includes(search)
+        // || fighter.division.name.toLowerCase().includes(search)
+        || fighter.wins.toString().includes(search)
+        || fighter.losses.toString().includes(search)
+        || fighter.status.toLowerCase().includes(search)
+        ).map((fighter)=> (
+          <AthleteCard user={user} fighter={fighter} key={fighter.id}/>
+          ))
+        }
         
           </div>
 
