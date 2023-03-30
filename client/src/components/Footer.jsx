@@ -30,7 +30,7 @@ export default function Footer({user}) {
 
             <div class="flex mt-4 md:m-0">
                 <div class="-mx-4">
-                  <Link to="/events" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">
+                  <Link to="/upcomingevents" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">
                     Events
                   </Link>
                   <Link to="/connect" class="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline">
